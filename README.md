@@ -1,69 +1,71 @@
 # paho-mqtt
-## 1、介绍
-- [Paho MQTT](http://www.eclipse.org/paho/downloads.php) 是 Eclipse 实现的基于 MQTT 协议的客户端，本软件包是在 Eclipse [paho-mqtt](https://github.com/eclipse/paho.mqtt.embedded-c) 源码包的基础上设计的一套 MQTT 客户端程序。
 
-- `paho-mqtt` 软件包功能特点以及 MQTT  协议介绍请参考 [软件包详细介绍](docs/introduction.md)。
+## 1 Introduction
 
-### 1.1 目录结构
+- [Paho MQTT](http://www.eclipse.org/paho/downloads.php) is a client based on MQTT protocol implemented by Eclipse. This package is in Eclipse [paho-mqtt](https://github.com/eclipse/paho.mqtt.embedded-c) A set of MQTT client programs designed based on the source code package.
 
-`paho-mqtt` 软件包目录结构如下所示：
+- For the features of the `paho-mqtt` software package and the introduction of the MQTT protocol, please refer to [Package Details](docs/introduction.md).
 
-``` 
+### 1.1 Directory structure
+
+The directory structure of the `paho-mqtt` package is as follows:
+
+```
 pahomqtt
-├───docs 
-│   └───figures                     // 文档使用图片
-│   │   api.md                      // API 使用说明
-│   │   introduction.md             // 介绍文档
-│   │   principle.md                // 实现原理
-│   │   README.md                   // 文档结构说明  
-│   │   samples.md                  // 软件包示例
-│   │   user-guide.md               // 使用说明
-│   └───version.md                  // 版本
-├───MQTTClient-RT                   // 移植文件
-├───MQTTPacket                      // 源文件
-├───samples                         // 示例代码
-│       mqtt_sample.c               // 软件包应用示例代码
-├───tests                           // mqtt 功能测试程序
-│   LICENSE                         // 软件包许可证
-│   README.md                       // 软件包使用说明
-└───SConscript                      // RT-Thread 默认的构建脚本
+├───docs
+│ └───figures            // Documents use pictures
+│ │ api.md               // API instructions
+│ │ introduction.md      // Introduction document
+│ │ principle.md         // Implementation principle
+│ │ README.md            // Document structure description
+│ │ samples.md           // package sample
+│ │ user-guide.md        // Instructions
+│ └───version.md         // version
+├───MQTTClient-RT        // transplant file
+├───MQTTPacket           // source file
+├───samples              // sample code
+│ mqtt_sample.c          // Software package application sample code
+├───tests                // mqtt function test program
+│ LICENSE                // package license
+│ README.md              // Software package instructions
+└───SConscript           // RT-Thread default build script
 ```
 
-### 1.2 许可证
+### 1.2 License
 
-`paho-mqtt` package 遵循 Eclipse Public License - v 1.0 许可，详见 `LICENSE` 文件。
+The `paho-mqtt` package is licensed under the Eclipse Public License-v 1.0, see the `LICENSE` file for details.
 
-### 1.3 依赖
+### 1.3 Dependency
 
 - RT-Thread 3.0+
 
-## 2、获取软件包
+## 2. Get the software package
 
-使用 `paho-mqtt` 软件包需要在 BSP 目录下使用 menuconfig 命令打开 Env 配置界面，在 `RT-Thread online packages → IoT - internet of things`  中选择 Paho MQTT 软件包，操作界面如下图所示：
+To use the `paho-mqtt` software package, you need to use the menuconfig command in the BSP directory to open the Env configuration interface, and select the Paho MQTT software package in the `RT-Thread online packages → IoT-internet of things`, the operation interface is as shown in the figure below:
 
-![选中 Paho MQTT 软件包](docs/figures/select_mqtt_package.png)
+![Select Paho MQTT package](docs/figures/select_mqtt_package.png)
 
-选择合适的配置项后，使用 `pkgs --update` 命令下载软件包并添加到工程中即可。
+After selecting the appropriate configuration items, use the `pkgs --update` command to download the software package and add it to the project.
 
-## 3、使用 paho-mqtt
+## 3. Use paho-mqtt
 
-* 如何从零开始使用，请参考 [用户手册](docs/user-guide.md)。
-* 完整的 API 文档，请参考 [API 手册](docs/api.md)。
-* 详细的示例介绍，请参考 [示例文档](docs/samples.md) 。
-* MQTT 协议工作原理，请参考 [工作原理](docs/principle.md) 。
-* 更多**详细介绍文档**位于 [`/docs`](/docs) 文件夹下，**使用软件包进行开发前请务必查看**。
+* For how to use it from scratch, please refer to [User Manual](docs/user-guide.md).
+* For complete API documentation, please refer to [API Manual](docs/api.md).
+* For detailed sample introduction, please refer to [Sample Document](docs/samples.md).
+* For the working principle of MQTT protocol, please refer to [Working Principle](docs/principle.md).
+* More **Detailed introduction documents** are located in the [`/docs`](/docs) folder, **Please check before using the package for development**.
 
-## 4、注意事项
+## 4. Matters needing attention
 
-- 正确填写代理服务器的账号密码
+- Fill in the account password of the proxy server correctly
 
-    如果账号密码填写错误，MQTT 客户端将无法正确连接到 MQTT 服务器。
+    If the account password is incorrect, the MQTT client will not be able to connect to the MQTT server correctly.
 
-- 合理配置 MQTT 线程栈
+- Reasonably configure the MQTT thread stack
 
-    如果使用 MQTT TLS 加密连接，MQTT 线程栈至少需要 6144 字节。
+    If you use MQTT TLS to encrypt the connection, the MQTT thread stack needs at least 6144 bytes.
 
-## 5、联系方式 & 感谢
+## 5. Contact & Thanks
 
-* 维护：RT-Thread 开发团队
-* 主页：https://github.com/RT-Thread-packages/paho-mqtt
+* Maintenance: RT-Thread development team
+* Homepage: https://github.com/RT-Thread-packages/paho-mqtt
